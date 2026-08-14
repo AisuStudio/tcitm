@@ -269,13 +269,12 @@ blockquote.pull cite{ display:block; margin-top:.9rem; font-family:'Archivo',san
 .card .place{ margin-top:1.1rem; font-size:.68rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--ochre-ink); }
 
 /* ---------- example-image tiles (generated textures, stand-in for photography) ---------- */
-.tile{ width:100%; height:7.6rem; position:relative; overflow:hidden; border-bottom:1px solid var(--line); flex:none; }
+.tile{ width:100%; aspect-ratio:1/1; position:relative; overflow:hidden; border-bottom:1px solid var(--line); flex:none; }
 .tile::after{
   content:""; position:absolute; inset:0; filter:url(#tcitm-grain);
   opacity:.32; mix-blend-mode:multiply; pointer-events:none;
 }
 :root[data-theme="dark"] .tile::after, @media (prefers-color-scheme:dark){ .tile::after{ mix-blend-mode:overlay; opacity:.4; } }
-.tile--sm{ height:5.4rem; }
 .tile--photo{ background:var(--linen-3); }
 .tile--photo img{ width:100%; height:100%; object-fit:cover; display:block; }
 
